@@ -11,7 +11,6 @@ import sys
 import subprocess
 from pathlib import Path
 from dotenv import load_dotenv
-import time
 
 # Load environment variables
 load_dotenv()
@@ -78,7 +77,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def educational_scripts_menu(self):
         """Educational scripts submenu"""
@@ -115,7 +113,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def database_menu(self):
         """Database management submenu"""
@@ -148,7 +145,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def quick_tests_menu(self):
         """Quick tests submenu"""
@@ -181,7 +177,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def documentation_menu(self):
         """Documentation submenu"""
@@ -214,7 +209,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def run_environment_check(self):
         """Run the full environment check"""
@@ -856,7 +850,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
                 
     def basic_chat_interface(self):
         """Basic chat interface with Gemini AI"""
@@ -1219,7 +1212,6 @@ class SQLAgentCLI:
                 break
             else:
                 print("❌ Invalid choice. Please try again.")
-                time.sleep(1)
 
 if __name__ == "__main__":
     cli = SQLAgentCLI()

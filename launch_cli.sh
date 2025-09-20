@@ -18,12 +18,28 @@ fi
 # Activate virtual environment
 source .venv/bin/activate
 
-# Check if Python packages are installed
-if ! python -c "import langchain_google_genai" 2>/dev/null; then
-    echo "⚠️  Dependencies not installed or virtual environment not activated"
-    echo "   Installing dependencies..."
-    pip install -r requirements.txt
+#!/bin/bash
+# SQL Agent CLI Launcher - Project Submission Ready
+# Direct launch without requiring virtual environment
+
+echo "🛡️ SQL Agent Security & Analytics Masterclass 🛡️"
+echo "Launching interactive demonstration..."
+echo
+
+# Check if Python is available
+if ! command -v python3 &> /dev/null; then
+    echo "❌ Python 3 is required but not found!"
+    echo "   Please install Python 3.8+ and try again."
+    exit 1
 fi
 
-# Launch CLI
-python sql_agent_cli.py
+# Check if main file exists
+if [ ! -f "main.py" ]; then
+    echo "❌ main.py not found!"
+    echo "   Please ensure you're in the correct directory."
+    exit 1
+fi
+
+# Launch the main CLI
+echo "🚀 Starting SQL Agent demonstration..."
+python3 main.py
